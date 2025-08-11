@@ -3,36 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Stellar Homes</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Using a new, working background image link from Pexels */
+            background-image: url('https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        /* A smooth transition for the navigation bar background and text color change */
+        .navbar-transition {
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+    </style>
 </head>
 <body>
-    <div class="flex justify-between items-center text-gray-500 bg-black h-10">
-    <p class="font-bold text-xl italic bg-gradient-to-r from-orange-500 to-green-300 via-yellow-400 text-transparent bg-clip-text">BlissLeaf</p>
-    <a href="#" class="font-bold hover:text-orange-500">Home</a>
-    <a href="#" class="font-bold hover:text-yellow-400">Services</a>
-    <a href="#" class="font-bold hover:text-green-300">About</a>
-    <div>
-    <button class="font-bold text-gray-700 border-2 bg-gradient-to-r from-orange-500 to-green-300 via-yellow-400 rounded-lg border-yellow-400 hover:text-lg">
-        Login/Sign up
-    </button>
-    </div>
 
-    </div>
-
-    <div class="bg-blue-50 h-screen py-4">
-        <p class="font-bold text-5xl  flex justify-center">Infuse Your Life with Nature's Goodness</p>
-
-        <p class="p-8 text-lg">Discover a world of flavorful and beneficial herbal teas at BlissLeaf. We offer a wide selection of handcrafted tisanes, each meticulously blended with the finest natural ingredients to promote well-being and enhance your daily routine. Whether you seek relaxation, invigoration, or a moment of mindful calm, our diverse range of herbal infusions provides a delicious and healthy way to connect with nature's bounty. Explore our collection and embark on a journey of taste and tranquility.</p>
-
-        <div class="flex justify-center items-center">
-        <button class=" font-bold text-gray-700 border-2 bg-gradient-to-r from-orange-500 to-green-300 via-yellow-400 rounded-lg border-yellow-400 hover:text-lg ">
-            Buy Now
-        </button>
+    <!-- Fixed Navigation Bar -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 p-4 navbar-transition text-white">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Stellar Homes</a>
+            <div class="space-x-4">
+                <a href="#listings" class="hover:text-blue-400">Listings</a>
+                <a href="#about" class="hover:text-blue-400">About</a>
+                <a href="#contact" class="hover:text-blue-400">Contact</a>
+            </div>
         </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <header class="bg-gray-900/70 text-white flex items-center justify-center text-center" style="height: 100vh;">
+        <div class="p-8 md:p-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 animate-fadeIn">Find Your Dream Home</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 animate-slideUp">
+                Explore a curated selection of properties and find the perfect place to call your own.
+            </p>
+            <a href="#listings" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                View Listings
+            </a>
         </div>
-        
-        
+    </header>
+
+    <!-- Listings Section - Updated for background image -->
+    <section id="listings" class="py-16 md:py-24 text-white bg-black/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Property Card 1 - Modern Villa -->
+                <div class="bg-gray-800/90 rounded-xl shadow-xl overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Modern Villa" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Modern Villa</h3>
+                        <p class="mb-4 text-gray-200">A stunning, contemporary villa with breathtaking ocean views.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-400">$1,200,000</span>
+                            <button class="bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-500 transition-colors">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property Card 2 - Cozy Apartment -->
+                <div class="bg-gray-800/90 rounded-xl shadow-xl overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Cozy Apartment" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Cozy Apartment</h3>
+                        <p class="mb-4 text-gray-200">A perfect city-center apartment with all the modern amenities.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-400">$450,000</span>
+                            <button class="bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-500 transition-colors">Details</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Property Card 3 - Family House -->
+                <div class="bg-gray-800/90 rounded-xl shadow-xl overflow-hidden transform transition-transform hover:scale-105">
+                    <img src="https://images.pexels.com/photos/208736/pexels-photo-208736.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Family House" class="w-full h-52 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-2">Spacious Family House</h3>
+                        <p class="mb-4 text-gray-200">An ideal home for a growing family in a quiet, friendly neighborhood.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-blue-400">$850,000</span>
+                            <button class="bg-gray-600 text-white px-4 py-2 rounded-full hover:bg-gray-500 transition-colors">Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Updated for background image -->
+    <section id="about" class="py-16 md:py-24 text-white bg-black/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">About Us</h2>
+            <p class="text-lg max-w-3xl mx-auto">
+                At Stellar Homes, we believe that finding a home should be a seamless and enjoyable experience. Our team of dedicated professionals is committed to helping you navigate the real estate market with confidence and ease.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section - Updated for background image -->
+    <section id="contact" class="py-16 md:py-24 text-white bg-black/50 backdrop-blur-sm">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+            <p class="text-lg max-w-3xl mx-auto">
+                Ready to find your new home? Get in touch with our team today to get started.
+            </p>
+            <div class="mt-8">
+                <a href="mailto:info@stellarhomes.com" class="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg">
+                    Send an Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white text-center py-8">
+        <p>&copy; 2024 Stellar Homes. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mainNav = document.getElementById('main-nav');
+            let navLinks = mainNav.querySelectorAll('a');
+
+            // Function to apply styles for scrolled state
+            const applyScrolledStyles = () => {
+                mainNav.classList.remove('bg-transparent', 'text-white');
+                mainNav.classList.add('bg-white', 'shadow-md', 'text-gray-800');
+                navLinks.forEach(link => {
+                    link.classList.remove('hover:text-blue-400');
+                    link.classList.add('hover:text-blue-600');
+                });
+            };
+
+            // Function to apply styles for non-scrolled state
+            const applyDefaultStyles = () => {
+                mainNav.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
+                mainNav.classList.add('bg-transparent', 'text-white');
+                navLinks.forEach(link => {
+                    link.classList.remove('hover:text-blue-600');
+                    link.classList.add('hover:text-blue-400');
+                });
+            };
+
+            // Event listener for scroll
+            window.addEventListener('scroll', () => {
+                // Check if the user has scrolled more than 50 pixels
+                if (window.scrollY > 50) {
+                    applyScrolledStyles();
+                } else {
+                    applyDefaultStyles();
+                }
+            });
+
+            // Initial check in case the page is reloaded with a scroll position
+            if (window.scrollY > 50) {
+                applyScrolledStyles();
+            } else {
+                applyDefaultStyles();
+            }
+        });
+    </script>
+
 </body>
 </html>
